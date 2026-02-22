@@ -27,12 +27,23 @@ class DeepSignalModel(nn.Module):
 # ---------------------------
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+from huggingface_hub import hf_hub_download
+
+MODEL_REPO = "SSHHIVANI/deepsignal-ai-safety-engine"
+
+# Download model weights from Hugging Face
+model_path = hf_hub_download(
+    repo_id=MODEL_REPO,
+    filename="deepsignal_model.pt"
+)
+
 model = DeepSignalModel()
-model.load_state_dict(torch.load("/content/drive/MyDrive/DeepSignal/model/deepsignal_model.pt", map_location=device))
+model.load_state_dict(torch.load(model_path, map_location=device))
 model.to(device)
 model.eval()
 
-tokenizer = DistilBertTokenizer.from_pretrained("/content/drive/MyDrive/DeepSignal/model")
+# Load tokenizer directly from Hugging Face
+tokenizer = DistilBertTokenizer.from_pretrained(MODEL_REPO)
 
 
 # ---------------------------
