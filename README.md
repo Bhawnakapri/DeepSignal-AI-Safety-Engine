@@ -69,20 +69,22 @@ This improved recall for rare safety-critical categories.
 ## Threshold Calibration
 
 Instead of default 0.5 thresholds, per-label threshold optimization was performed:
+| Label | Optimized Threshold |
+|--------|-------------------|
+| Depression | 0.45 |
+| Toxicity | 0.20 |
+| Manipulation | 0.10 |
 
-| Label        | Optimized Threshold |
-| Depression   | 0.45                |
-| Toxicity     | 0.20                |
-| Manipulation | 0.10                |
 
 ## Model Performance
 
 ### ROC-AUC Scores
 
-| Label        | ROC-AUC  |
-| Depression   | 0.93+    |
-| Toxicity     | 0.94+    |
-| Manipulation | 0.99     |
+| Label | ROC-AUC |
+|--------|----------|
+| Depression | 0.93+ |
+| Toxicity | 0.94+ |
+| Manipulation | 0.99 
 
 High ROC-AUC values indicate strong discriminative performance across all labels.
 
