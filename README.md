@@ -51,11 +51,13 @@ Streamlit Deployment
 - GPU: T4 (Google Colab)
 
 ### Labels
+| Label | Description |
+|--------|------------|
+| Depression | Psychological distress indicators |
+| Toxicity | Offensive / harmful language |
+| Manipulation | Emotional coercion patterns |
 
-| Label        | Description                       |
-| Depression   | Psychological distress indicators |
-| Toxicity     | Offensive / harmful language      |
-| Manipulation | Emotional coercion patterns       |
+
 
 ##  Handling Class Imbalance
 
