@@ -118,6 +118,8 @@ This ensures high-risk cases are escalated immediately.
 - Model loaded from saved PyTorch weights
 
 ## Project Structure
+
+```
 DeepSignal/
 │
 ├── app.py
@@ -125,11 +127,10 @@ DeepSignal/
 ├── deepsignal_model.ipynb
 ├── deepsignal_dataset.ipynb
 └── README.md
+```
 
 
----
-
-## 🧩 Key Technical Highlights
+##  Key Technical Highlights
 
 - Multi-label transformer fine-tuning
 - Imbalance-aware training
